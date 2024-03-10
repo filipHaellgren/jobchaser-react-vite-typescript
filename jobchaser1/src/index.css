@@ -1,0 +1,67 @@
+.wholeList{
+display: flex;
+justify-content: center;
+}
+
+.job-item{
+  display: flex;
+ border-radius: 20px;
+ 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.job-container :hover{
+  transform: scale(1.01);
+}
+
+.job-container{
+display: flex;
+gap: 2rem;
+flex-direction: column;
+max-width: 830px;
+
+
+
+}
+.leftSide{
+  display: flex;
+  flex-direction: column;
+}
+
+.company{
+  display: flex;
+  justify-content: center;
+
+}
+.underCompany{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rightSide{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+.rightSide > p{
+  background-color: rgb(135, 183, 224);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+#postAt{
+display: flex;
+align-items: end;
+color: grey;
+
+
+}
+
+img{
+  width: 7rem;
+  height: 7rem;
+}
