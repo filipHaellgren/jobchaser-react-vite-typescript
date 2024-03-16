@@ -1,5 +1,5 @@
 // data.tsx
-export interface Job {
+/* export interface Job {
   id: number;
   company: string;
   logo: string;
@@ -146,3 +146,19 @@ export const jobs: Job[] = [
     }
   ];
 
+ */
+  import { Job } from './job';
+
+  export const fetchData = async (): Promise<Job[]> => {
+      try {
+          const response = await fetch('/path/to/data.json'); // Update the path to your JSON file
+          if (!response.ok) {
+              throw new Error('Failed to fetch data');
+          }
+          const jsonData = await response.json();
+          return jsonData as Job[];
+      } catch (error) {
+          console.error('Error fetching data:', error);
+          return [];
+      }
+  };

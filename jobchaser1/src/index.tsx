@@ -1,4 +1,4 @@
-import { createRoot } from 'react-dom/client';
+/* import { createRoot } from 'react-dom/client';
 import React from 'react';
 import App from './App';
 
@@ -14,3 +14,14 @@ if (rootElement) {
 } else {
   console.error('Root element not found in the document.');
 }
+ */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);

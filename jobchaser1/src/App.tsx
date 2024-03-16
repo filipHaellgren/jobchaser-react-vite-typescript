@@ -1,12 +1,18 @@
-// App.tsx
+
 import React from 'react';
-import JobList from './jobList';
-import { jobs } from './data';
+import jobData from './data.json'; // Import JSON data directly
 
 const App: React.FC = () => {
     return (
-        <div className='wholeList'>
-            <JobList jobs={jobs} />
+        <div>
+            <h1>Job List</h1>
+            <ul>
+                {jobData.map((job, index) => (
+                    <li key={index}>
+                        {job.company} - {job.position}
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
