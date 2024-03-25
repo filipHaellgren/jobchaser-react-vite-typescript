@@ -15,13 +15,21 @@ if (rootElement) {
   console.error('Root element not found in the document.');
 }
  */
+// index.tsx or App.tsx
+
+// index.tsx
+
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom'; // Import createRoot instead of ReactDOM.render
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import App from './App';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById('root')
+// Use createRoot instead of ReactDOM.render
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+  <Router>
+    <App />
+  </Router>
 );
